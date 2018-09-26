@@ -1,23 +1,59 @@
 <html>
 	<head>
 		<script src="jquery1.10.2.js"></script>
-		<script src="gameEngine.js"></script>
-		<link href="main.css" rel="stylesheet"></link>
+		<meta name="viewport" content="width=device-width"/>
+		<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+		<link href="score.css" rel="stylesheet"></linl>
 	    <link href="font-awesome/css/font-awesome.css" rel="stylesheet"></link>
+		<link href="main.css" rel="stylesheet"></link>
+		<script src="score.js"></script>
+		<script src="gameEngine.js"></script>
 	</head>
 	<body>
-		<div class="container">
-		<span id="timerDiv"></span>
-		<div id="attemptsDiv">
-			Attempts:
-			<i class="icon-heart"></i> 
-			<i class="icon-heart"></i> 
-			<i class="icon-heart"></i> 
-		</div>
+		<div id="room">
+		<div id="scoreBoard"></div>
+		<ul class="menu">
+			<li>
+				<div id="attemptsDiv">
+					Attempts  
+					<i class="icon-heart"></i> 
+					<i class="icon-heart"></i> 
+					<i class="icon-heart"></i> 
+				</div>
+			</li>
+			<li class="floatRight">
+				<div id="beginButton" class="beginButton">
+					<span>Not recording</span>
+					<!-- <span class="icon-stack"> -->
+						<!-- <i class="icon-spinner enlargeIcon icon-stack-base"></i> -->
+					<i id="iconMic" class="icon-microphone"></i>
+					<!-- </span> -->
+				</div>
+			</li>
+		</ul> 
 		<table id="textDiv">
-				<td id="currWord"><i></i>undef</td>
+			<td id="currWord">
+				<i></i>
+				<div id="timer">
+					60
+				</div>
+				<div id="playWord">
+					<i class="icon-volume-up"></i>
+				</div>
+				<div id="skip">
+					skip
+					<!-- <i class="icon-mail-forward"></i> -->
+				</div>
+				<div id="fadeBackground">
+					<div id="largeButton">
+						<i class="icon-microphone beginButton"></i>
+						<br>
+						<span>begin</span>
+					</div>
+				</div>
+<!-- 				<span>undef</span>
+ -->			</td>	
 		</table>
-		<button id="beginButton">Start game!</button>
 		</div>
 	</body>
 </html>

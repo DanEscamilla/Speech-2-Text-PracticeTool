@@ -1,0 +1,237 @@
+/*Para score board*/
+/* line 149, resources2.scss */
+#absolutePos, .innerBar, .showScore, .showScore2, .restart, .restartDif {
+  position:absolute;
+}
+/*.bar {
+  height: 5%;
+  width: 38.5%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #141414;
+  left: 200px;
+  z-index: 9;
+}*/
+.bar{
+  height: 5%;
+  width: 38.5%;
+  background-color: #141414;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:5%;
+  float:left;
+    -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 158, resources2.scss */
+.textBar {
+  position: relative;
+  top: -100%;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30%;
+}
+.divTitle{
+  color: #ecf0f1;
+  padding-top:5%;
+  width:100%;
+  text-align: center;
+}
+.showScore2 .divTitle{
+  padding:0 5%;
+  text-align: left;
+}
+/* line 170, resources2.scss */
+/*.innerBar {
+  top: 15%;
+  left: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  height: 70%;
+  width: 1%;
+  background-image: url("progress.png");
+  background-size: 96px 100%;
+  transition:width 2s;
+  -webkit-transition:width 2s;
+  z-index: 10;
+}*/
+.innerBar {
+  position:relative;
+  top: -85%;
+  left: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  height: 70%;
+  width: 1%;
+  background-color:#e67e22;
+  /*background-image: url("progress.png");*/
+  background-size: 96px 100%;
+  transition:width 2s;
+  -webkit-transition:width 2s;
+  z-index: 10;
+}
+/* line 181, resources2.scss */
+.showScore, .showScore2 {
+  padding-left: 0%;
+  padding-top: 1.7%;
+  background-color: #3D4750;
+/*  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;*/
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 335%;
+  z-index: 5;
+}
+@keyframes myfirst /* Safari and Chrome */
+{
+  from {
+    width:0%;
+    left:50%;
+  }
+  to {
+    width:100%;
+    left:0%;
+  }
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    from{
+        width:0%;
+        left:50%;
+    }
+    to{
+        width:100%;
+        left:0%;
+    }
+}
+.showScore2{
+  overflow:hidden;
+  white-space: nowrap;
+  animation:myfirst 2s;
+  -webkit-animation:myfirst 2s;
+} 
+/*.showScore2:hover {
+  width:100%;
+  height:100%;
+}*/
+
+/* line 196, resources2.scss */
+
+/* line 202, resources2.scss */
+.hideScore {
+  display: none;
+}
+
+/* line 205, resources2.scss */
+.restart, .restartDif {
+  top: 5%;
+  left: 78%;
+  background-color:#16a085;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  display: inline-block;
+  color:#ecf0f1;
+  font-size: 25%;
+  padding: 1.3% 5.4%;
+}
+
+/* line 218, resources2.scss */
+.restart:hover, .restartDif:hover {
+  cursor: hand;
+  cursor: pointer;
+  background-color:#16A88B;
+}
+
+/* line 224, resources2.scss */
+.restartDif {
+  left: 30.5%;
+  font-size: 70%;
+  width: 30%;
+  text-align: center;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { 
+  .showScore{
+    font-size:325%;
+    white-space: nowrap;
+    height: 94%;
+    padding-top: 6%;
+    width:100%;
+  }
+  .showScore2{
+    font-size: 280%;
+    height: 95%;
+    padding-top: 6%;
+    width:100%;
+  }
+  .divTitle{
+    padding-left:6%;
+    margin-bottom:5%;
+  }
+  .restart{
+      top: 6.3%;
+    left: 66%;
+    font-size: 50%;
+  }
+  .innerBar{
+    top:-120%;
+    left:2%;
+  }
+  .textBar {
+    font-size:55%;
+    top:-140%;
+    height:140%;
+  }
+  .restartDif{
+    left: 28.5%;
+  }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation:landscape){ 
+  .textBar{
+    top:-160%;
+    height:160%;
+    font-size: 35%;
+  }
+  .innerBar{
+    top:-145%;
+  }
+    .showScore2, .showScore{
+    padding-top: 2%;
+    height:98%;
+  }
+  .bar{
+    margin-top:6%;
+  }
+  .divTitle{
+    margin-bottom:2%;
+  }
+}
